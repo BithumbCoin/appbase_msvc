@@ -176,7 +176,7 @@ bool application::initialize_impl(int argc, char** argv, vector<abstract_plugin*
       for(auto& arg : plugins)
       {
          vector<string> names;
-         boost::split(names, arg, boost::is_any_of(" \t,"));
+         boost::split(names, arg, boost::is_any_of(",")); // net_plugin,chain_plugin
          for(const std::string& name : names)
             get_plugin("class "+ name).initialize(options);	 // class net_plugin
       }

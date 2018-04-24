@@ -25,18 +25,36 @@ shutdown chain plugin
 exited cleanly
 ```
 
-- Tow plugin
+- Two plugin
 
-```ps1
-> .\App.exe --plugin net_plugin --plugin chain_plugin
-```
+1. Use two "--plugin"
 
-```ps1
-initialize chain plugin
-initialize net plugin
-starting chain plugin
-starting net plugin
-shutdown net plugin
-shutdown chain plugin
-exited cleanly
-```
+    ```ps1
+    > .\App.exe --plugin net_plugin --plugin chain_plugin
+    ```
+
+    ```ps1
+    initialize chain plugin
+    initialize net plugin
+    starting chain plugin
+    starting net plugin
+    shutdown net plugin
+    shutdown chain plugin
+    exited cleanly
+    ```
+
+2. Separate plugins with commas
+
+    ```ps1
+    > .\App.exe --plugin net_plugin,chain_plugin
+    ```
+
+    ```ps1
+    initialize chain plugin
+    initialize net plugin
+    starting chain plugin
+    starting net plugin
+    shutdown net plugin
+    shutdown chain plugin
+    exited cleanly
+    ```
